@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <title>아주대학교 의학문헌정보센터</title>
     <style>
+        html{
+            height: 1000px;
+        }
         body{
             background-image: url("img/bg.gif");
+            background-repeat: repeat-x;
         }
         li, ul{
             list-style-type:none;
@@ -26,7 +30,7 @@
             right: 10px;
             text-align: center;
             top:25px;
-            font-size: 10px;
+            font-size: small;
         }
         a{
             text-decoration: none;
@@ -40,7 +44,7 @@
         }
         .top_link{
             padding-right: 15px;
-            border-right: 1px solid black;
+            border-right: 1px solid #4a4a4a;
         }
         .top_btn{
             margin-right: 10px;
@@ -71,47 +75,54 @@
             position: absolute;
             width: 960px;
             height: 48px;
-            top:61px;
+            top:55px;
         }
-        .top{
-            display: flex;
-            flex-direction: row;
-            font-weight: bold;
-            font-size:15px;
-            z-index: 2;
-        }
-        .menu{
-            color: white;
-            margin-right: 100px;
-            z-index: 2;
-        }
-        .hidden{
-            display: none;
-            font-size: 10px;
-            border-left: 1px solid #d6d6d6;
-            border-right: 1px solid #d6d6d6;
-            border-bottom: 2px solid #005bac;
-            width: 150px;
-        }
-        .hidden_sub{
-            text-align: left;
-            margin-top:8px;
-            width: 150px;
-        }
-        .menu_link:hover>.hidden{
-            display: block;
-            background-color: white;
-        }
-        .hidden_sub:hover{
-            background-color: #005bac;
-        }
-        .menu_sub:hover{
-            color: white;
-        }
+
+        /*.top{*/
+            /*display: flex;*/
+            /*flex-direction: row;*/
+            /*font-size:large;*/
+            /*z-index: 2;*/
+        /*}*/
+        /*.menu{*/
+            /*color: white;*/
+            /*font-weight: bold;*/
+            /*margin-right:90px;*/
+            /*padding:0px;*/
+            /*z-index: 2;*/
+        /*}*/
+        /*.hidden{*/
+            /*display: none;*/
+            /*font-size: small;*/
+            /*border-left: 1px solid #d6d6d6;*/
+            /*border-right: 1px solid #d6d6d6;*/
+            /*border-bottom: 2px solid #005bac;*/
+            /*width: 130px;*/
+        /*}*/
+        /*.hidden_sub{*/
+            /*text-align: left;*/
+            /*margin-top:4px;*/
+            /*width: 130px;*/
+        /*}*/
+        /*.menu_link:hover > .hidden{*/
+            /*display: block;*/
+            /*background-color: white;*/
+        /*}*/
+        /*.hidden_sub:hover{*/
+            /*background-color: #005bac;*/
+        /*}*/
+        /*.menu_sub:hover{*/
+            /*color: white;*/
+        /*}*/
+        /*.menu_link{*/
+            /*!*width:100px;*!*/
+            /*z-index: 2;*/
+        /*}*/
+
         #show_allmenu{
             position: absolute;
-            right: 73px;
-            top: 13px;
+            right: 10px;
+            top: 20px;
         }
         #main_top{
             position: relative;
@@ -120,10 +131,6 @@
             margin: auto;
             top:-24px;
             z-index: 1;
-        }
-        #search_top{
-            width: 535px;
-            height: 26px;
         }
         #searchtop_tab{
             display: flex;
@@ -152,8 +159,126 @@
             margin-left: 5px;
 
         }
-        .menu_link{
+
+
+
+        #main_center{
+            position: relative;
+            width: 970px;
+            height: 480px;
+            margin: auto;
+        }
+        #quick_menu{
+            position: absolute;
+            height: 210px;
+            border-right:1px solid #d0d0d0;
+        }
+        #service, #notice{
+            padding-left: 10px;
+        }
+        .quick_service{
+            display: flex;
+            flex-direction: row;
+            padding-left: 0px;
+            padding-right: 10px;
+        }
+        .service_sub{
+            text-align: center;
+            font-size: small;
+            margin-right: 10px;
+        }
+        .service_text{
+            padding-top: 20px;
+            width: 120px;
+        }
+
+        #service_menu{
+            position: absolute;
+            width: 210px;
+            height: 210px;
+            right: 70px;
+        }
+        .quick_menu{
+            margin-bottom: 10px;
+            padding-left: 0px;
+            margin-left: -40px;
+        }
+        .service_link:hover{
+            color: blue;
+        }
+        /*.service_link:visited{*/
+            /*color: #4a4a4a;*/
+        /*}*/
+        #main_bottom{
+            position: relative;
+            width: 970px;
+            height: 480px;
+            margin: auto;
+        }
+        #notice_menu{
+            position: absolute;
+            height: 215px;
+            width: 350px;
+            bottom: 10px;
+        }
+        .main_text{
+            font-size: small;
+            font-weight: bold;
+            color: #005bac;
+            margin-bottom: 30px;
+        }
+        .notice_sub{
+            padding-bottom: 12px;
+            padding-top: 12px;
+            border-bottom: 1px solid #d0d0d0;
+            width: 300px;
+            background: url("img/tabgroup_line.png");
+            background-repeat: no-repeat;
+            background-size: 6px;
+            background-position-y: 22px;
+            padding-left: 17px;
+        }
+        span{
+            font-size: small;
+        }
+        #notice_list{
+            padding-left: 10px;
+        }
+        .data{
+            padding-left: 35px;
+        }
+        .notice_text{
+            font-size: small;
+        }
+
+        #information{
+            margin-right: 0px;
+        }
+        #search{
+            position: absolute;
             z-index: 2;
+        }
+        .headermenu_text{
+            font-size: large;
+            color: white;
+            font-weight: bold;
+            position: absolute;
+            top:18px;
+        }
+        #data_search{
+            left:40px;
+            width: 75px;
+        }
+        .hidden{
+            position: relative;
+            width: 150px;
+            top:40px;
+            left: -24px;
+            padding-bottom: 5px;
+            font-size: small;
+        }
+        .hidden_sub{
+            display: none;
         }
     </style>
 </head>
@@ -190,111 +315,138 @@
                 </ul>
             </div>
             <div id = "header_menu">
-                <ul class = "top">
-                    <li class = "menu_link">
-                        <a class = "menu" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">자료검색</a>
-                        <ul class = "hidden" style="padding-left: 15px;margin-top:15px;margin-left: -20px;margin-right: -20px">
-                            <li class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">통합검색</a>
-                            </li>
-                            <li  class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">단행본</a>
-                            </li>
-                            <li  class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">학술지</a>
-                            </li>
-                            <li  class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">E-Journal</a>
-                            </li>
-                            <li  class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">E-Book</a>
-                            </li>
-                            <li  class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">Database</a>
-                            </li>
-                            <li  class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">사료</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class = "menu_link">
-                        <a class = "menu" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">내 도서관 관리</a>
-                        <ul class = "hidden" style="padding-left: 10px;margin-top:15px;margin-left: -20px;margin-right: -20px">
-                            <li class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">대출현황 조회 / 갱신</a>
-                            </li>
-                            <li  class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">도서구입 신청</a>
-                            </li>
-                            <li  class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">원문복사 신청</a>
-                            </li>
-                            <li  class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">논문교정 신청</a>
-                            </li>
-                            <li  class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">즐겨찾기</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class = "menu_link">
-                        <a class = "menu" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">커뮤니티</a>
-                        <ul class = "hidden" style="padding-left: 10px;margin-top:15px;margin-left: -20px;margin-right: -20px">
-                            <li class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">공지사항</a>
-                            </li>
-                            <li  class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">FAQ</a>
-                            </li>
-                            <li  class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">Q&A</a>
-                            </li>
-                            <li  class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">자료실</a>
-                            </li>
-                            <li  class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">설문조사</a>
-                            </li>
-                            <li  class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">뉴스레터</a>
-                            </li>
-                            <li  class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">포스터 자료실</a>
-                            </li>
-                            <li  class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">메디컬 일러스트</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class = "menu_link">
-                        <a class = "menu" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">이용안내</a>
-                        <ul class = "hidden" style="padding-left: 10px;margin-top:15px;margin-left: -20px;margin-right: -20px">
-                            <li class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">센터 이용안내</a>
-                            </li>
-                            <li  class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">제공서비스 안내</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class = "menu_link">
-                        <a class = "menu" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">센터소개</a>
-                        <ul class = "hidden" style="padding-left: 10px;margin-top:15px;margin-left: -20px;margin-right: -20px">
-                            <li class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">일반현황</a>
-                            </li>
-                            <li  class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">연혁</a>
-                            </li>
-                            <li  class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">조직도 / 담당자 안내</a>
-                            </li>
-                            <li  class = "hidden_sub">
-                                <a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">찾아오시는 길</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                <div id = "search">
+                    <a id = "data_search" class = "headermenu_text" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">자료검색</a>
+                    <ul class = "hidden">
+                        <!--<a id = "data_search" class = "headermenu_text" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">자료검색</a>-->
+                        <li class = "hidden_sub">
+                            <a href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">통합검색</a>
+                        </li>
+                        <li class = "hidden_sub">
+                            <a href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">단행본</a>
+                        </li>
+                        <li class = "hidden_sub">
+                            <a href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">학술지</a>
+                        </li>
+                        <li class = "hidden_sub">
+                            <a href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">E-Journal</a>
+                        </li>
+                        <li class = "hidden_sub">
+                            <a href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">E-Book</a>
+                        </li>
+                        <li class = "hidden_sub">
+                            <a href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">Database</a>
+                        </li>
+                        <li class = "hidden_sub">
+                            <a href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">사료</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--<ul class = "top">-->
+                    <!--<li class = "menu_link">-->
+                        <!--<a class = "menu" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">자료검색</a>-->
+                        <!--<ul class = "hidden" style="padding-left: 15px;margin-top:15px;margin-left: -20px;margin-right: -20px">-->
+                            <!--<li class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">통합검색</a>-->
+                            <!--</li>-->
+                            <!--<li  class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">단행본</a>-->
+                            <!--</li>-->
+                            <!--<li  class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">학술지</a>-->
+                            <!--</li>-->
+                            <!--<li  class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">E-Journal</a>-->
+                            <!--</li>-->
+                            <!--<li  class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">E-Book</a>-->
+                            <!--</li>-->
+                            <!--<li  class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">Database</a>-->
+                            <!--</li>-->
+                            <!--<li  class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">사료</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <!--<li class = "menu_link">-->
+                        <!--<a class = "menu" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">내 도서관 관리</a>-->
+                        <!--<ul class = "hidden" style="padding-left: 10px;margin-top:15px;margin-left: -20px;margin-right: -20px">-->
+                            <!--<li class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">대출현황 조회 / 갱신</a>-->
+                            <!--</li>-->
+                            <!--<li  class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">도서구입 신청</a>-->
+                            <!--</li>-->
+                            <!--<li  class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">원문복사 신청</a>-->
+                            <!--</li>-->
+                            <!--<li  class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">논문교정 신청</a>-->
+                            <!--</li>-->
+                            <!--<li  class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">즐겨찾기</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <!--<li class = "menu_link">-->
+                        <!--<a class = "menu" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">커뮤니티</a>-->
+                        <!--<ul class = "hidden" style="padding-left: 10px;margin-top:15px;margin-left: -20px;margin-right: -20px">-->
+                            <!--<li class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">공지사항</a>-->
+                            <!--</li>-->
+                            <!--<li  class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">FAQ</a>-->
+                            <!--</li>-->
+                            <!--<li  class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">Q&A</a>-->
+                            <!--</li>-->
+                            <!--<li  class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">자료실</a>-->
+                            <!--</li>-->
+                            <!--<li  class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">설문조사</a>-->
+                            <!--</li>-->
+                            <!--<li  class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">뉴스레터</a>-->
+                            <!--</li>-->
+                            <!--<li  class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">포스터 자료실</a>-->
+                            <!--</li>-->
+                            <!--<li  class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">메디컬 일러스트</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <!--<li class = "menu_link">-->
+                        <!--<a class = "menu" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">이용안내</a>-->
+                        <!--<ul class = "hidden" style="padding-left: 10px;margin-top:15px;margin-left: -20px;margin-right: -20px">-->
+                            <!--<li class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">센터 이용안내</a>-->
+                            <!--</li>-->
+                            <!--<li  class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">제공서비스 안내</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <!--<li class = "menu_link">-->
+                        <!--<a id = "information" class = "menu" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">센터소개</a>-->
+                        <!--<ul class = "hidden" style="padding-left: 10px;margin-top:15px;margin-left: -20px;margin-right: -20px">-->
+                            <!--<li class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">일반현황</a>-->
+                            <!--</li>-->
+                            <!--<li  class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">연혁</a>-->
+                            <!--</li>-->
+                            <!--<li  class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">조직도 / 담당자 안내</a>-->
+                            <!--</li>-->
+                            <!--<li  class = "hidden_sub">-->
+                                <!--<a class="menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">찾아오시는 길</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                <!--</ul>-->
                 <div id = "show_allmenu">
                     <img src="img/btn_bottom.png">
                 </div>
@@ -303,7 +455,7 @@
     </header>
     <section>
         <div id = "main_top">
-            <div id = "search_top">
+            <div>
                 <ul id = "searchtop_tab">
                     <li id = "search_tab2" class = "search_img">
                         <a href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html"> <img src="img/search_tab2_over.png"> </a>
@@ -313,7 +465,7 @@
                     </li>
                 </ul>
             </div>
-            <div id = "search_bottom">
+            <div>
                 <ul id = "searchbottom_tab">
                     <li class = "quick_img">
                          <img src="img/quick_search_bg2.gif">
@@ -328,6 +480,72 @@
             </div>
         </div>
         <div id = "main_center">
+            <div id = "quick_menu">
+                <h2 class = "main_text" id ="service">빠른서비스</h2>
+                <ul class = quick_service>
+                    <a class = "service_link" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">
+                        <li class = "service_sub">
+                            <img src="img/quick_menu_box_01.png">
+                            <div class = "service_text">원문복사신청</div>
+                        </li>
+                    </a>
+                    <a class = "service_link"  href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">
+                        <li class = "service_sub">
+                            <img src="img/quick_menu_box_02.png">
+                            <div class = "service_text" >논문교정신청</div>
+                        </li>
+                    </a>
+                    <a class = "service_link"  href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">
+                        <li  class = "service_sub">
+                            <img src="img/quick_menu_box_03.png">
+                            <div class = "service_text">도서구입신청</div>
+                        </li>
+                    </a>
+                    <a class = "service_link"  href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">
+                        <li  class = "service_sub">
+                            <img src="img/quick_menu_box_04.png">
+                            <div class = "service_text">대출현황조회/갱신</div>
+                        </li>
+                    </a>
+                    <a class = "service_link"  href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">
+                        <li  class = "service_sub">
+                            <img src="img/quick_menu_box_05.png">
+                            <div class = "service_text">뉴스레터</div>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <div id = "service_menu">
+                <h2 class = "main_text" id ="e_service">전자정보서비스</h2>
+                <ul>
+                    <li class = "quick_menu">
+                        <a href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html"> <img src="img/quick_menu_01.png"> </a>
+                    </li>
+                    <li  class = "quick_menu">
+                        <a href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html"> <img src="img/quick_menu_02.png"> </a>
+                    </li>
+                    <li  class = "quick_menu">
+                        <a href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html"> <img src="img/quick_menu_03.png"> </a>
+                    </li>
+                </ul>
+            </div>
+            <div id = "notice_menu">
+                <h2 class = "main_text" id ="notice">공지사항</h2>
+                <ul id = "notice_list">
+                    <li class = "notice_sub">
+                        <a class = "notice_text" href = "http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html"> 공지사항 첫 번째 글입니다.</a>
+                        <span class = "data"> [2018-01-10]</span>
+                    </li>
+                    <li class = "notice_sub">
+                        <a class = "notice_text" href = "http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html"> 공지사항 두 번째 글입니다.</a>
+                        <span class = "data"> [2018-01-02]</span>
+                    </li>
+                    <li class = "notice_sub">
+                        <a class = "notice_text" href = "http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html"> 공지사항 세 번째 글입니다.</a>
+                        <span class = "data"> [2018-01-02]</span>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div id = "main_bottom">
         </div>
