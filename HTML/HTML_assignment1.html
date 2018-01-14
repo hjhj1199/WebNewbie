@@ -257,28 +257,47 @@
         #search{
             position: absolute;
             z-index: 2;
-        }
-        .headermenu_text{
-            font-size: large;
-            color: white;
-            font-weight: bold;
-            position: absolute;
-            top:18px;
-        }
-        #data_search{
-            left:40px;
+            top:15px;
             width: 75px;
+            height: 25px;
+            left: 40px;
         }
+
         .hidden{
-            position: relative;
-            width: 150px;
-            top:40px;
+            position: absolute;
+            width: 130px;
+            top:25px;
             left: -24px;
-            padding-bottom: 5px;
+            padding-left: 10px;
             font-size: small;
+            display: none;
+            border-left: 1px solid #d6d6d6;
+            border-right: 1px solid #d6d6d6;
+            border-bottom: 2px solid #005bac;
+            background-color: white;
         }
         .hidden_sub{
-            display: none;
+            padding-bottom: 5px;
+        }
+        #data_search{
+            color: white;
+            font-size: large;
+            position: absolute;
+            top:-15px;
+            left:20px;
+            font-weight: bold;
+        }
+        .menu:hover>.hidden{
+            display: block;
+        }
+        .menu_sub:hover{
+            color:white;
+        }
+        .hidden_sub:hover{
+            background-color: #005bac;
+        }
+        .menu_sub{
+            width: 120px;
         }
     </style>
 </head>
@@ -315,33 +334,34 @@
                 </ul>
             </div>
             <div id = "header_menu">
-                <div id = "search">
-                    <a id = "data_search" class = "headermenu_text" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">자료검색</a>
+                <ul class = "menu" id = "search">
+                    <li>
+                        <a id = "data_search" class = "headermenu_text" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">자료검색</a>
+                    </li>
                     <ul class = "hidden">
-                        <!--<a id = "data_search" class = "headermenu_text" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">자료검색</a>-->
                         <li class = "hidden_sub">
-                            <a href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">통합검색</a>
+                            <a class = "menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">통합검색</a>
                         </li>
                         <li class = "hidden_sub">
-                            <a href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">단행본</a>
+                            <a class = "menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">단행본</a>
                         </li>
                         <li class = "hidden_sub">
-                            <a href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">학술지</a>
+                            <a class = "menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">학술지</a>
                         </li>
                         <li class = "hidden_sub">
-                            <a href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">E-Journal</a>
+                            <a class = "menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">E-Journal</a>
                         </li>
                         <li class = "hidden_sub">
-                            <a href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">E-Book</a>
+                            <a class = "menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">E-Book</a>
                         </li>
                         <li class = "hidden_sub">
-                            <a href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">Database</a>
+                            <a class = "menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">Database</a>
                         </li>
                         <li class = "hidden_sub">
-                            <a href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">사료</a>
+                            <a class = "menu_sub" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">사료</a>
                         </li>
                     </ul>
-                </div>
+                </ul>
                 <!--<ul class = "top">-->
                     <!--<li class = "menu_link">-->
                         <!--<a class = "menu" href="http://hjhj1199.iwinv.net/HTML/HTML_assignment1.html">자료검색</a>-->
